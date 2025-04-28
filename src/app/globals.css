@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #00205B; /* Azul escuro */
+  --primary-light: #1A3A7A;
+  --primary-dark: #001845;
+  --secondary: #FFFFFF; /* Branco */
+  --accent: #0056B3;
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --background: #F5F7FA;
+  --error: #D32F2F;
+  --success: #388E3C;
+  --warning: #F57C00;
+  --info: #0288D1;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text-primary);
+}
+
+/* Estilização de componentes principais */
+.btn-primary {
+  @apply bg-blue-900 text-white hover:bg-blue-800 focus:ring-blue-800;
+}
+
+.btn-secondary {
+  @apply bg-white text-blue-900 border border-blue-900 hover:bg-blue-50 focus:ring-blue-800;
+}
+
+.navbar {
+  @apply bg-blue-900 text-white;
+}
+
+.sidebar {
+  @apply bg-white border-r border-gray-200;
+}
+
+.sidebar-link {
+  @apply text-blue-900 hover:bg-blue-50;
+}
+
+.sidebar-link.active {
+  @apply bg-blue-100 font-medium;
+}
+
+.card {
+  @apply bg-white rounded-lg shadow-sm border border-gray-100;
+}
+
+.card-header {
+  @apply border-b border-gray-100 p-4 bg-blue-50;
+}
+
+.form-input {
+  @apply border border-gray-300 rounded-md focus:ring-blue-800 focus:border-blue-800;
+}
+
+.table-header {
+  @apply bg-blue-50 text-blue-900;
+}
+
+.status-badge {
+  @apply px-2 py-1 rounded-full text-xs font-medium;
+}
+
+.status-badge-open {
+  @apply bg-blue-100 text-blue-800;
+}
+
+.status-badge-in-progress {
+  @apply bg-yellow-100 text-yellow-800;
+}
+
+.status-badge-waiting {
+  @apply bg-purple-100 text-purple-800;
+}
+
+.status-badge-completed {
+  @apply bg-green-100 text-green-800;
+}
+
+/* Animações e transições */
+.transition-all {
+  @apply transition-all duration-200 ease-in-out;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    @apply px-4;
+  }
+}
